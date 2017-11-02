@@ -6,7 +6,7 @@ class Robot:
         # Find nearest enemy
         enemies = {}
         nearest_enemy = (1000000, rg.CENTER_POINT)
-        for loc, bot in game.robots.iteritems():
+        for loc, bot in game.robots.items():
             if bot.player_id != self.player_id:
                 enemies[loc] = bot
                 distance = rg.dist(loc, self.location)

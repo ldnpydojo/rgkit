@@ -19,7 +19,7 @@ class Robot:
         return ['move', rg.toward(self.location, rg.CENTER_POINT)]
 
     def generate_adjacent_enemies(self, game):
-        for loc, bot in game.robots.iteritems():
+        for loc, bot in game.robots.items():
             if bot.player_id != self.player_id:
                 if rg.dist(loc, self.location) <= 1:
                     yield bot

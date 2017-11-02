@@ -16,7 +16,7 @@ class Robot:
 
         closest_bot_loc = None
         closest_bot_distance = 50000
-        for loc, bot in game.robots.iteritems():
+        for loc, bot in game.robots.items():
             if bot.player_id != self.player_id:
                 if rg.dist(loc, self.location) <= 1:
                     if self.hp < 11:
